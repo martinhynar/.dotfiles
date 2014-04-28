@@ -1,0 +1,42 @@
+# PATHS
+WORKBENCH=~/Workbench
+
+PATH=~/bin:${PATH}
+
+JAVA_HOME=/usr/java/latest/
+PATH=${JAVA_HOME}:${PATH}
+
+TMP=/tmp; export TMP
+TMPDIR=$TMP; export TMPDIR
+
+# System paths
+PATH=$PATH:/usr/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:.
+
+export PATH
+
+# ALIASES
+alias ll='ls -lah --color=auto'
+alias w='cd ${WORKBENCH}'
+alias sr='sudo bash'
+alias gvim="gvim -p --remote-tab-silent"
+alias pgrep="pgrep -lf"
+alias g="gvim"
+
+alias eeessh="ssh -l root eeebox"
+
+alias mygithub="cd ${WORKBENCH}/Projects/My.GitHub"
+alias open="xdg-open $1 2> /dev/null"
+alias octave="octave -q"
+
+alias ,p="cd /home/mhynar/Projects"
+
+export BROWSER="google-chrome"
+export LC_ALL=en_US.utf-8
+
+# JAVA CLASSPATH
+# export CLASSPATH
+
+# Default applications
+xdg-mime default google-chrome.desktop application/pdf
+xdg-mime default emacs.desktop text/plain
+xdg-mime default emacs.desktop application/xml
