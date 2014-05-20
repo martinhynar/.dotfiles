@@ -18,7 +18,6 @@
 		      projectile
 		      groovy-mode
 		      yaml-mode
-		      evil
 		      markdown-mode
 		      adoc-mode))
 
