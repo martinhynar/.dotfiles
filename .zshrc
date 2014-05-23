@@ -6,7 +6,7 @@ COMPLETION_WAITING_DOTS="true"
  
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(jira git-fast history-substring-search completion history emacs oh-my-settings oh-my-company)
+plugins=(jira git-fast history-substring-search completion history oh-my-settings oh-my-company)
  
 source $ZSH/oh-my-zsh.sh
  
