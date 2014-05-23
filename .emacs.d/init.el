@@ -138,6 +138,11 @@
 
 ;; YASnippet
 ;; ------------------------
-(add-to-list 'load-path "~/.emacs.d/packages/yasnippet")
+(add-to-list 'load-path "~/.emacs.d/git-packages/yasnippet")
 (require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"
+        "~/.emacs.d/git-packages/yasnippet/snippets"
+        ))
+
 (yas-global-mode 1)
