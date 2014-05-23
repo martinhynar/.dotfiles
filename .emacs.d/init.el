@@ -17,7 +17,6 @@
 		      smex
 		      projectile
 		      groovy-mode
-		      yaml-mode
 		      markdown-mode
 		      adoc-mode))
 
@@ -107,14 +106,6 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; YAML
-;; ------------------------
-(require 'yaml-mode)
-(add-to-list 'auto-mode-alist '("\\.sls$" . yaml-mode))
-(add-hook 'yaml-mode-hook
-      '(lambda ()
-        (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
-
 
 ;; TRAMP
 ;; ------------------------
@@ -144,3 +135,9 @@
 
 ;  Enable eldoc - shows fn argument list in echo area
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
+
+;; YASnippet
+;; ------------------------
+(add-to-list 'load-path "~/.emacs.d/packages/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
