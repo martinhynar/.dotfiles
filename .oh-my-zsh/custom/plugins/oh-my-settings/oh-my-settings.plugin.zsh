@@ -40,3 +40,14 @@ export LC_ALL=en_US.utf-8
 xdg-mime default google-chrome.desktop application/pdf
 xdg-mime default emacs.desktop text/plain
 xdg-mime default emacs.desktop application/xml
+
+
+EMACS_DAEMON=$(ps -C "emacs" -o pid,args | grep "daemon" | awk '{print $1}')
+[ -z "${EMACS_DAEMON}" ] && echo "Starting Emacs daemon" && /usr/bin/emacs --daemon &
+
+
+start_emacs() {
+  emacsclient --alternate-editor="" --create-frame $@ &
+}
+alias emacs=start_emacs
+alias e=start_emacs
