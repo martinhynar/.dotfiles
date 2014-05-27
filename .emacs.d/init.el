@@ -133,6 +133,11 @@
 (add-to-list 'auto-mode-alist '("\\.cljx\\'" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 
+;; Shell
+;; ------------------------
+(add-to-list 'auto-mode-alist '("\\.sh$" . shell-mode))
+(add-to-list 'auto-mode-alist '("\\.zsh$" . shell-mode))
+
 ;  Enable eldoc - shows fn argument list in echo area
 (add-hook 'cider-mode-hook 'cider-turn-on-eldoc-mode)
 
