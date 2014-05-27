@@ -68,7 +68,8 @@
 (setq tab-width 4)
 (setq indent-tabs-mode nil)
 
-; instead of C-x o
+;; C-TAB to chenge active window (instead of C-x o)
+;; ------------------------
 (global-set-key [C-tab] 'other-window)
 (defun org-mode-other-window-too ()
   (local-set-key [C-tab] 'other-window))
