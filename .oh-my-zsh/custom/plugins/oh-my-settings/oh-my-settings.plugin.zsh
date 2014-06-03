@@ -51,3 +51,11 @@ start_emacs() {
 }
 alias emacs=start_emacs
 alias e=start_emacs
+
+
+# GIT
+alias ,gcm="git commit -m $@"
+alias ,gs="git status"
+
+
+
