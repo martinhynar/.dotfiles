@@ -38,8 +38,13 @@ export LC_ALL=en_US.utf-8
 
 # Default applications
 xdg-mime default google-chrome.desktop application/pdf
+xdg-mime default google-chrome.desktop text/html
+
 xdg-mime default emacs.desktop text/plain
 xdg-mime default emacs.desktop application/xml
+
+xdg-mime default emacs.desktop x-scheme-handler/http
+xdg-mime default emacs.desktop x-scheme-handler/https
 
 
 EMACS_DAEMON=$(ps -C "emacs" -o pid,args | grep "daemon" | awk '{print $1}')
