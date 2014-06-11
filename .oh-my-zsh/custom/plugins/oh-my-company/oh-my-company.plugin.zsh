@@ -26,17 +26,6 @@ _vagrant() { pushd $1; vagrant $2; popd }
 alias ,vagrant_devbox_up="_vagrant ~/Projects/NetSuite/salt-states/ up"
 alias ,vagrant_devbox_halt="_vagrant ~/Projects/NetSuite/salt-states/ halt"
 
-oracle_start () {
-su - oracle -c '
-emctl start dbconsole;
-lsnrctl start;
-sqlplus sys/oracle as sysdba <<-EOF
-startup
-select vi.host_name, vd.name from v\$instance vi, v\$database vd;
-quit
-EOF
-'
-}
 
 
 ,git_pull_all_NS_projects() {
@@ -54,3 +43,13 @@ export P4USER=mhynar
 export P4PASSWD=Klobasa2
 export P4CLIENT=mhynar_localhost
 export P4IGNORE=.p4ignore
+
+_p4sync() {
+  p4 sync //depot/Bamboo/...
+  p4 sync //depot/Costars/...
+  p4 sync //depot/NetLedger/...
+  p4 sync //depot/Tools/...
+  p4 sync //depot/Sandbox/...
+}
+
+alias ,p4sync=_p4sync
