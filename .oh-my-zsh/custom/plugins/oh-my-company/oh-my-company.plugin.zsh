@@ -38,11 +38,8 @@ alias ,vagrant_devbox_halt="_vagrant ~/Projects/NetSuite/salt-states/ halt"
 }
 
 # PERFORCE
-export P4PORT=rebarbora.corp.netledger.com:1667
-export P4USER=mhynar
-export P4PASSWD=Klobasa2
-export P4CLIENT=mhynar_localhost
-export P4IGNORE=.p4ignore
+[ ! -f ${HOME}/.p4 ] && echo "File '${HOME}/.p4' does not exist. Populate it with variables P4PORT, P4USER, P4PASSWD, P4CLIENT to make P4 functional."
+[ -f ${HOME}/.p4 ] && source ${HOME}/.p4
 
 _p4sync() {
   p4 sync //depot/Bamboo/...
