@@ -43,8 +43,8 @@ xdg-mime default google-chrome.desktop text/html
 xdg-mime default emacs.desktop text/plain
 xdg-mime default emacs.desktop application/xml
 
-xdg-mime default google-chrome x-scheme-handler/http
-xdg-mime default google-chrome x-scheme-handler/https
+xdg-mime default google-chrome.desktop x-scheme-handler/http
+xdg-mime default google-chrome.desktop x-scheme-handler/https
 
 
 EMACS_DAEMON=$(ps -C "emacs" -o pid,args | grep "daemon" | awk '{print $1}')
