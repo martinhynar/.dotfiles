@@ -122,6 +122,8 @@
 ;; ------------------------
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+; Install python-markdown2 package from yum
+(custom-set-variables '(markdown-command "/usr/bin/markdown2"))
 
 ;; AsciiDoc
 ;; ------------------------
