@@ -9,6 +9,10 @@ PATH=${JAVA_HOME}:${PATH}
 TMP=/tmp; export TMP
 TMPDIR=$TMP; export TMPDIR
 
+# GOLANG
+GOPATH=~/Projects/Go
+PATH=${GOPATH}/bin:${PATH}
+
 # System paths
 PATH=$PATH:/usr/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:.
 
