@@ -10,7 +10,7 @@ TMP=/tmp; export TMP
 TMPDIR=$TMP; export TMPDIR
 
 # GOLANG
-GOPATH=~/Projects/Go
+export GOPATH=~/Projects/Go
 PATH=${GOPATH}/bin:${PATH}
 
 # System paths
