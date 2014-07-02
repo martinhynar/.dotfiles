@@ -65,6 +65,7 @@ alias e=start_emacs
 # GIT
 alias ,gcm="git commit -m $@"
 alias ,gs="git status"
-
+alias ,gp="git push"
+alias ,gpt="git push --tags"
 
 
