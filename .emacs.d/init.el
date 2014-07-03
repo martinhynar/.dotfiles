@@ -154,4 +154,3 @@
         ))
 
 (yas-global-mode 1)
-(global-prettify-symbols-mode 1)
