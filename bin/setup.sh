@@ -30,8 +30,10 @@ echo "Setting up Zsh and Oh-My-Zsh custom additions"
 makeLink ${HOME}/.zshrc
 mkdir -p ${OH_MY_ZSH}/custom/plugins/oh-my-company
 mkdir -p ${OH_MY_ZSH}/custom/plugins/oh-my-settings
+mkdir -p ${OH_MY_ZSH}/custom/plugins/oh-my-xfce
 makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-settings/oh-my-settings.plugin.zsh
 makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-company/oh-my-company.plugin.zsh
+makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-company/oh-my-xfce.plugin.zsh
 
 
 
