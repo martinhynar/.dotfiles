@@ -33,7 +33,7 @@ mkdir -p ${OH_MY_ZSH}/custom/plugins/oh-my-settings
 mkdir -p ${OH_MY_ZSH}/custom/plugins/oh-my-xfce
 makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-settings/oh-my-settings.plugin.zsh
 makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-company/oh-my-company.plugin.zsh
-makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-company/oh-my-xfce.plugin.zsh
+makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-xfce/oh-my-xfce.plugin.zsh
 
 
 
