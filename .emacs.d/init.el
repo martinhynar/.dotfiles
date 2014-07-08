@@ -14,7 +14,6 @@
 		      paredit
 		      rainbow-delimiters
 		      auto-complete
-		      auto-complete-config
 		      gist
 		      smex
 		      projectile
