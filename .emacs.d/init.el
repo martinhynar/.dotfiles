@@ -26,12 +26,11 @@
 
 ;; PARENS
 ;; ------------------------
-;(require 'smartparens)
 (add-hook 'clojure-mode-hook       'paredit-mode)
 (add-hook 'clojurescript-mode-hook 'paredit-mode)
 (add-hook 'cider-repl-mode-hook    'paredit-mode)
 (require 'rainbow-delimiters)
-(add-hook 'smartparens-mode-hook 'rainbow-delimiters-mode)
+(add-hook 'cider-repl-mode-hook 'rainbow-delimiters-mode)
 ; Show matching parentheses
 (show-paren-mode 1)
 
