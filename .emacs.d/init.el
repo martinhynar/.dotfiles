@@ -11,7 +11,8 @@
 
 
 (defvar my-packages '(cider
-		      smartparens
+		      ;smartparens
+		      paredit
 		      rainbow-delimiters
 		      gist
 		      smex
@@ -26,14 +27,16 @@
 
 ;; PARENS
 ;; ------------------------
-(require 'smartparens)
-(add-hook 'clojure-mode-hook       'smartparens-strict-mode)
-(add-hook 'clojurescript-mode-hook 'smartparens-strict-mode)
-(add-hook 'cider-repl-mode-hook    'smartparens-strict-mode)
+;(require 'smartparens)
+;(add-hook 'clojure-mode-hook       'smartparens-strict-mode)
+;(add-hook 'clojurescript-mode-hook 'smartparens-strict-mode)
+;(add-hook 'cider-repl-mode-hook    'smartparens-strict-mode)
 (require 'rainbow-delimiters)
 (add-hook 'smartparens-mode-hook 'rainbow-delimiters-mode)
 ; Show matching parentheses
 (show-paren-mode 1)
+
+(require 'paredit)
 
 ;; SMEX
 ;; ------------------------
