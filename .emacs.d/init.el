@@ -13,7 +13,6 @@
 (defvar my-packages '(cider
 		      paredit
 		      rainbow-delimiters
-		      auto-complete
 		      gist
 		      smex
 		      projectile
