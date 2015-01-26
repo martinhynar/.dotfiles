@@ -73,3 +73,6 @@ alias ,dk_c_ui="docker run -d -p 127.0.0.1:9000:9000 --name docker_ui --privileg
 alias ,dk_ui="docker start docker_ui"
 alias ,dk_c_es142="docker run -d -p 127.0.0.1:9200:9200 -p 127.0.0.1:9300:9300 --name elasticsearch_142 barnybug/elasticsearch:1.4.2"
 alias ,dk_es142="docker start elasticsearch_142"
+alias ,dk_c_kibana4="docker run --name kibana4_b3 -e ELASTICSEARCH=http://localhost:9200 -P marcbachmann/kibana4:4.0.0-BETA3"
+alias ,dk_kibana4="docker start kibana4_b3"
+
