@@ -71,5 +71,5 @@ alias ,gpt="git push --tags"
 # DOCKER
 alias ,dk_c_ui="docker run -d -p 127.0.0.1:9000:9000 --name docker_ui --privileged -v /var/run/docker.sock:/var/run/docker.sock dockerui/dockerui"
 alias ,dk_ui="docker start docker_ui"
-alias ,dk_c_es="docker run -d -p 127.0.0.1:9200:9200 -p 127.0.0.1:9300:9300 --name elasticsearch dockerfile/elasticsearch"
-alias ,dk_es="docker start elasticsearch"
+alias ,dk_c_es142="docker run -d -p 127.0.0.1:9200:9200 -p 127.0.0.1:9300:9300 --name elasticsearch_142 barnybug/elasticsearch:1.4.2"
+alias ,dk_es142="docker start elasticsearch_142"
