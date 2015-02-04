@@ -47,3 +47,7 @@ makeLink ${EMACSD}/init.el
 TARGET=${EMACSD}/git-packages/yasnippet
 [ -d ${TARGET} ] && echo -en "Updating Emacs YASnippet package: " && git -C ${TARGET} pull
 [ ! -d ${TARGET} ] && echo "Installing Emacs YASnippet package" && mkdir -p ${TARGET} && git -C ${TARGET} clone --recursive git@github.com:capitaomorte/yasnippet.git .
+
+# LEIN
+DOT_LEIN=~/.lein
+makeLink ${DOT_LEIN}/profiles.clj
