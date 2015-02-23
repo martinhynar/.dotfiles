@@ -1,5 +1,5 @@
 {:user {:plugins [
-                  [venantius/ultra "0.2.0"]
+                  [venantius/ultra "0.2.1"]
                   [lein-ancient "0.6.1"]
                   ]
         :ultra {:color-scheme :solarized_dark
