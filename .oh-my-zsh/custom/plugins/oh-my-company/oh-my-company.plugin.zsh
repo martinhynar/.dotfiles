@@ -10,6 +10,8 @@ alias ,gs='git status'
 alias ,hosts='cat /etc/hosts | grep -v "#"'
 alias ,pn="cd ~/Projects/NetSuite"
 
+alias ,gp_salt="git -C ~/Projects/NetSuite/salt-pillar pull --rebase --verbose; git -C ~/Projects/NetSuite/salt-states pull --rebase --verbose"
+
 _vssh() { ssh -o BatchMode=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=temp_known_hosts.mh-build -o PasswordAuthentication=no nsbuild@$1.vm.netsuite.com }
 alias ,vssh=_vssh
 
