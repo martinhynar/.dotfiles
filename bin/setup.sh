@@ -25,7 +25,7 @@ git -C ${DOTFILES} pull
 # OH MY ZSH
 TARGET=${OH_MY_ZSH}
 [ -d ${TARGET} ] && echo -en "Updating Oh My ZSH: " && git -C ${TARGET} pull
-[ ! -d ${TARGET} ] && echo "Installing Oh My ZSH" && mkdir -p ${TARGET} && git -C ${TARGET} clone git@github.com:robbyrussell/oh-my-zsh.git .
+[ ! -d ${TARGET} ] && echo "Installing Oh My ZSH" && mkdir -p ${TARGET} && git clone git@github.com:robbyrussell/oh-my-zsh.git ${TARGET}
 
 echo "Setting up Zsh and Oh-My-Zsh custom additions"
 makeLink ${HOME}/.zshrc
@@ -46,7 +46,7 @@ makeLink ${EMACSD}/init.el
 # YASNIPPET
 TARGET=${EMACSD}/git-packages/yasnippet
 [ -d ${TARGET} ] && echo -en "Updating Emacs YASnippet package: " && git -C ${TARGET} pull
-[ ! -d ${TARGET} ] && echo "Installing Emacs YASnippet package" && mkdir -p ${TARGET} && git -C ${TARGET} clone --recursive git@github.com:capitaomorte/yasnippet.git .
+[ ! -d ${TARGET} ] && echo "Installing Emacs YASnippet package" && mkdir -p ${TARGET} && git clone --recursive git@github.com:capitaomorte/yasnippet.git ${TARGET}  
 
 # LEIN
 DOT_LEIN=~/.lein
@@ -54,6 +54,13 @@ makeLink ${DOT_LEIN}/profiles.clj
 
 # COMPANY SETTINGS
 TARGET=${DOTFILESCOMP}
-[ -d ${TARGET} ] && echo -en "Updating Company dot files: " && git -C ${TARGET} pull
-[ ! -d ${TARGET} ] && echo "Installing Company dot files" && mkdir -p ${TARGET} && git -C ${TARGET} clone git@gitlab.eng.netsuite.com:mhynar/dotfiles.git .
-makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-company/oh-my-company.plugin.zsh
+HOST="gitlab.eng.netsuite.com"
+REPO="git@${HOST}:mhynar/dotfiles.git"
+curl -f --connect-timeout 2 -s -k -o /dev/null ${HOST}
+if [ $? -eq 0 ]; then
+    [ -d ${TARGET} ] && echo -en "Updating Company dot files: " && git -C ${TARGET} pull
+    [ ! -d ${TARGET} ] && echo "Installing Company dot files" && mkdir -p ${TARGET} && git clone "${REPO}" ${TARGET}
+    makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-company/oh-my-company.plugin.zsh
+else
+    echo "Company repo unavailable, skipping."
+fi;
