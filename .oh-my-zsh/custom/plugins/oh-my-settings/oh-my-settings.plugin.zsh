@@ -77,3 +77,5 @@ alias ,dk_c_kibana4="docker run --name kibana4_b3 -e ELASTICSEARCH=http://localh
 alias ,dk_kibana4="docker start kibana4_b3"
 
 alias ,ping_google_dns="ping -w 5 8.8.8.8; traceroute 8.8.8.8"
+
+alias ,json="xclip -o | jq '.'"
