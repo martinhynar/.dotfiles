@@ -63,11 +63,17 @@
 ;; Emacs prompts should accept "y" or "n" instead of the full word
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; TABS ARE EVIL
+;; TABS
 ;; ------------------------
 (setq c-basic-indent 2)
 (setq tab-width 4)
-(setq indent-tabs-mode nil)
+(setq indent-tabs-mode t)
+
+(add-hook 'python-mode-hook
+      (lambda ()
+        (setq indent-tabs-mode t)
+        (setq tab-width 4)
+        (setq python-indent 4)))
 
 ;; C-TAB to chenge active window (instead of C-x o)
 ;; ------------------------
