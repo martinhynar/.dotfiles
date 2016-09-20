@@ -9,7 +9,7 @@ PACKAGES=(${PACKAGES[@]} xrandr xbacklight)
 PACKAGES=(${PACKAGES[@]} jq)
 PACKAGES=(${PACKAGES[@]} xclip)
 PACKAGES=(${PACKAGES[@]} git)
-PACKAGES=(${PACKAGES[@]} ShellCheck ctags)
+PACKAGES=(${PACKAGES[@]} ShellCheck ctags tidy)
 
 
 sudo yum -y install ${PACKAGES[@]}
