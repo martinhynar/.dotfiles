@@ -9,5 +9,7 @@ PACKAGES=(${PACKAGES[@]} xrandr xbacklight)
 PACKAGES=(${PACKAGES[@]} jq)
 PACKAGES=(${PACKAGES[@]} xclip)
 PACKAGES=(${PACKAGES[@]} git)
+PACKAGES=(${PACKAGES[@]} ShellCheck)
+
 
 sudo yum -y install ${PACKAGES[@]}
