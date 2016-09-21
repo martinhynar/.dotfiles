@@ -4,7 +4,7 @@
 
 if [ $# -gt 0 -a "x$1" == "x--atom" ]; then
   echo "Re-installing atom ..."
-  wget https://atom.io/download/rpm -o /tmp/atom.rpm
+  wget https://atom.io/download/rpm -O /tmp/atom.rpm
   sudo dnf install /tmp/atom.rpm
 else
   echo "Use --atom to reinstall Atom itself"
@@ -23,7 +23,6 @@ apm install \
   highlight-line \
   language-elm \
   language-erlang \
-  language-javascript \
   language-r \
   linter \
   linter-clojure \
