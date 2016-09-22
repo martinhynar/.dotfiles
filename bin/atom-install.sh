@@ -42,4 +42,6 @@ apm install \
   minimap \
   php-composer-completion \
   php-cs-fixer \
-  sass-autocompile
+  sass-autocompile \
+  project-manager \
+  atom-html-preview
