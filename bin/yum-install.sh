@@ -10,6 +10,7 @@ PACKAGES=(${PACKAGES[@]} jq)
 PACKAGES=(${PACKAGES[@]} xclip)
 PACKAGES=(${PACKAGES[@]} git)
 PACKAGES=(${PACKAGES[@]} ShellCheck ctags tidy)
+PACKAGES=(${PACKAGES[@]} erlang erlang-eunit)
 
 
-sudo yum -y install ${PACKAGES[@]}
+sudo dnf -y install "${PACKAGES[@]}"

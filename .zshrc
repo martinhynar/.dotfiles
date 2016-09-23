@@ -1,15 +1,15 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="fishy"
- 
+
 DISABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
- 
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(docker git-fast history-substring-search completion history oh-my-settings oh-my-company oh-my-xfce)
- 
+plugins=(rebar docker git-fast history-substring-search completion history oh-my-settings oh-my-company oh-my-xfce)
+
 source $ZSH/oh-my-zsh.sh
- 
+
 _prompt() {
     c1=$white
     c2=$bwhite

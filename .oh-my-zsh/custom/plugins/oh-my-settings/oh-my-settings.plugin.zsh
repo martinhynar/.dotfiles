@@ -2,6 +2,7 @@
 WORKBENCH=~/Workbench
 
 PATH=~/bin:${PATH}
+PATH=~/.cache/rebar3/bin:${PATH}
 
 JAVA_HOME=/usr/java/latest/
 PATH=${JAVA_HOME}:${PATH}
@@ -28,7 +29,6 @@ alias g="gvim"
 
 alias eeessh="ssh -l root eeebox"
 
-alias mygithub="cd ${WORKBENCH}/Projects/My.GitHub"
 alias open="xdg-open $1 2> /dev/null"
 alias octave="octave -q"
 
@@ -82,3 +82,5 @@ alias ,json="xclip -o | jq '.'"
 alias ,mm="cd ~/Projects/Zakazky/mujmazel.cz"
 alias ,mmstart="cd ~/Projects/Zakazky/mujmazel.cz/vagrant; vagrant up"
 alias ,mmend="cd ~/Projects/Zakazky/mujmazel.cz/vagrant; vagrant halt"
+
+alias ,rebar_install="wget https://github.com/erlang/rebar3/releases/download/3.3.1/rebar3 && chmod +x rebar3"
