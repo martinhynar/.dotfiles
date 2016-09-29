@@ -44,4 +44,8 @@ apm install \
   php-cs-fixer \
   sass-autocompile \
   project-manager \
-  atom-html-preview
+  atom-html-preview \
+  proto-repl \
+  package-manager \
+  Ink \
+  parinfer
