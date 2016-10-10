@@ -51,8 +51,8 @@ xdg-mime default google-chrome.desktop x-scheme-handler/http
 xdg-mime default google-chrome.desktop x-scheme-handler/https
 
 
-EMACS_DAEMON=$(ps -C "emacs" -o pid,args | grep "daemon" | awk '{print $1}')
-[ -z "${EMACS_DAEMON}" ] && echo "Starting Emacs daemon" && /usr/bin/emacs --daemon &
+#EMACS_DAEMON=$(ps -C "emacs" -o pid,args | grep "daemon" | awk '{print $1}')
+#[ -z "${EMACS_DAEMON}" ] && echo "Starting Emacs daemon" && /usr/bin/emacs --daemon &
 
 
 start_emacs() {
