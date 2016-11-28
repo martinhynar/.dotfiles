@@ -1,7 +1,7 @@
 set nocompatible
 set path+=**
 set wildmenu
-
+execute pathogen#infect()
 
 " Line numbers
 set number
@@ -9,8 +9,8 @@ set numberwidth=6
 
 " tabulators
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 " allow backspacing over everything in insert mode
@@ -50,5 +50,7 @@ set hlsearch
 set autoindent		" always set autoindenting on
 
 
-nmap <ESC> :w<CR>
 nmap <C-i> gg<CR>=G<CR>
+
+inoremap <C-s> <ESC>:w<CR>a
+nnoremap <C-S> :w<CR>
