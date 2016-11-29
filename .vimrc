@@ -3,6 +3,8 @@ set path+=**
 set wildmenu
 execute pathogen#infect()
 
+set guifont=DejaVu\ Sans\ Mono\ 10  
+
 " Line numbers
 set number
 set numberwidth=6
