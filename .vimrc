@@ -43,7 +43,7 @@ command! MakeTags !ctags -R .
 
 filetype plugin indent on
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 " Highlight last searched pattern
