@@ -1,5 +1,9 @@
+source ~/.dotfiles-private/load-private
+
 # PATHS
 WORKBENCH=~/Workbench
+
+PATH=~/.dotfiles/bin:${PATH}
 
 PATH=~/bin:${PATH}
 PATH=~/.cache/rebar3/bin:${PATH}
@@ -12,6 +16,7 @@ TMPDIR=$TMP; export TMPDIR
 
 # GOLANG
 export GOPATH=~/Projects/Go
+PATH=/usr/local/go/bin:${PATH}
 PATH=${GOPATH}/bin:${PATH}
 
 # System paths
