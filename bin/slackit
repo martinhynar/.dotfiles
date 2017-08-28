@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+source ~/.dotfiles-private/slack
+
+MESSAGE=${1}
+if [ ! "x$MESSAGE" = "x" ]; then
+  R=$(curl -s -XPOST $KLAKSONEK_URL -d "{\"text\" : \"${MESSAGE}\"}")
+  echo "Message sent: $R"
+fi;
