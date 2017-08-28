@@ -14,20 +14,19 @@ apm install \
   aligner-php \
   atom-beautify \
   atom-ctags \
-  autocomplete-erlang \
   autocomplete-php \
   color-picker \
   emmet \
   file-icons \
-  git-time-machine \
+  git-plus \
   highlight-line \
-  language-elm \
-  language-erlang \
   language-r \
+  intentions \
+  busy-signal \
   linter \
+  linter-ui-default \
   linter-clojure \
   linter-csslint \
-  linter-erlang \
   linter-htmlhint \
   linter-javac \
   linter-js-yaml \
@@ -42,10 +41,9 @@ apm install \
   minimap \
   php-composer-completion \
   php-cs-fixer \
-  sass-autocompile \
   project-manager \
   atom-html-preview \
   proto-repl \
-  package-manager \
+  lisp-paredit \
   Ink \
   parinfer
