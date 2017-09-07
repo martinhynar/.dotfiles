@@ -69,9 +69,11 @@ alias e=start_emacs
 
 # GIT
 alias ,gcm="git commit -m $@"
+alias ,gcsm="git commit -S -m $@"
 alias ,gs="git status"
 alias ,gp="git push"
 alias ,gpt="git push --tags"
+alias ,gmaster="git checkout master"
 
 # DOCKER
 alias ,dk_c_ui="docker run -d -p 127.0.0.1:9000:9000 --name docker_ui --privileged -v /var/run/docker.sock:/var/run/docker.sock dockerui/dockerui"
