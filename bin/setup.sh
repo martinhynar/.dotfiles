@@ -15,7 +15,6 @@ makeLink () {
 # Initial Checks
 DOTFILES=${HOME}/.dotfiles
 DOTFILESCOMP=${HOME}/.dotfiles-company
-EMACSD=~/.emacs.d
 OH_MY_ZSH=~/.oh-my-zsh
 [ ! -d ${DOTFILES} ] && echo "${DOTFILES} does not exist, exiting" && exit 1
 
@@ -37,18 +36,6 @@ makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-settings/oh-my-settings.plugin.zsh
 makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-xfce/oh-my-xfce.plugin.zsh
 makeLink ${OH_MY_ZSH}/custom/plugins/oh-my-elasticsearch/oh-my-elasticsearch.plugin.zsh
 
-
-
-
-# EMACS
-echo "Setting up Emacs configuration"
-mkdir -p ${EMACSD}
-makeLink ${EMACSD}/init.el
-
-# YASNIPPET
-TARGET=${EMACSD}/git-packages/yasnippet
-[ -d ${TARGET} ] && echo -en "Updating Emacs YASnippet package: " && git -C ${TARGET} pull
-[ ! -d ${TARGET} ] && echo "Installing Emacs YASnippet package" && mkdir -p ${TARGET} && git clone --recursive git@github.com:capitaomorte/yasnippet.git ${TARGET}  
 
 # LEIN
 DOT_LEIN=~/.lein
