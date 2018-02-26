@@ -1,6 +1,7 @@
 {:user {
         :deploy-repositories [
                               ["clojars" {:signing {:gpg-key "Martin Hynar <martin.hynar@gmail.com>"}}]
+                              ["releases" {:signing {:gpg-key "AFA92C11"}}]
                               ]
         :plugins [
                   [venantius/ultra "0.5.1"]

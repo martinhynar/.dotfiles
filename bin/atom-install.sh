@@ -46,4 +46,5 @@ apm install \
   proto-repl \
   lisp-paredit \
   Ink \
+  rainbow-delimiters \
   parinfer

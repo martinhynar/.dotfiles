@@ -1,0 +1,10 @@
+- hosts: all
+  vars_files:
+    - rpm_packages.yml
+
+  tasks:
+      - name: RPM packages
+        dnf:
+          name: "{{ item }}"
+          state: latest
+        with_items: "{{ rpm_packages }}"
