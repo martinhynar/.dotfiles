@@ -6,7 +6,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-plugins=(rebar docker git-fast history-substring-search completion history oh-my-settings oh-my-company oh-my-xfce)
+plugins=(vscode docker git-fast history-substring-search completion history oh-my-settings oh-my-company)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -17,3 +17,7 @@ _prompt() {
     PROMPT="${c1}$c1($c2%n$c1@$c2%m$c1)$c1($c2%~$c1)%#$normal "
     RPROMPT=""
 }
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/mhynar/.sdkman"
+[[ -s "/home/mhynar/.sdkman/bin/sdkman-init.sh" ]] && source "/home/mhynar/.sdkman/bin/sdkman-init.sh"

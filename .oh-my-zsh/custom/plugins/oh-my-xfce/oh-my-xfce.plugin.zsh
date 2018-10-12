@@ -1,1 +1,0 @@
-xfconf-query --channel xfce4-keyboard-shortcuts --property "/commands/custom/<Super>t" --create --type string --set "exo-open --launch TerminalEmulator"
