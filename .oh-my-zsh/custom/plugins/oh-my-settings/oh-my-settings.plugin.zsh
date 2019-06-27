@@ -61,6 +61,7 @@ alias ,gp="git push"
 alias ,gpt="git push --tags"
 alias ,gmaster="git checkout master"
 alias ,gconfig_bitbucket='git config --local user.name "Martin Hynar"; git config --local user.email "martin.hynar@gmail.com"; git config --local --list'
+alias ,gconfig_gitlab='git config --local user.name "Martin Hynar"; git config --local user.email "martin.hynar@gmail.com"; git config --local --list'
 
 alias ,ping_google_dns="ping -w 5 8.8.8.8; traceroute 8.8.8.8"
 

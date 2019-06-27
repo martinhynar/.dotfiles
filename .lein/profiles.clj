@@ -5,7 +5,7 @@
                               ]
         :plugins [
                   [venantius/ultra "0.5.1"]
-                  [lein-ancient "0.6.1"]
+                  [lein-ancient "0.6.15"]
                   [lein-localrepo "0.5.3"]
                   [lein-pprint "1.1.2"]
                   ]
